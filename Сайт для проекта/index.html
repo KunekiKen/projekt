@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="capture"></div>
+        <div class="buttons">
+            <button onclick="showContent('content1')">About Site</button>
+            <button onclick="showContent('content2')">About Basketball</button>
+            <button onclick="showContent('content3')">Žalgiris</button>
+            <button onclick="cycleLanguage()" id="languageButton">🌐 Language</button>
+        </div>
+    </div>
+    <div class="main">   
+        <div id="content1" class="content active">
+            <div class="main1">
+                <h1 id="title1">About Site</h1>
+                <p id="text1" class="text">
+                    The site presents the history of basketball, from its origins and development to the present day. It tells about the key moments in the development of this sport, famous players, major competitions and the influence of basketball on world culture. Particular attention is paid to the Zalgiris team, the famous Lithuanian basketball club. It describes its history, achievements in the international arena, important games and legendary players who made Zalgiris a symbol of Lithuanian basketball.
+                </p>
+            </div>
+        </div> 
+        <div id="content2" class="content">
+            <div class="main1">
+                <h1 id="title2">About Basketball</h1>
+                <p id="text2" class="text">
+                    Basketball is a team sport played by two teams of five players. The goal of the game is to throw the ball into the opponent's basket, located at a height of 3.05 meters. Each successful hit earns the team points: two points for a shot from close range and three for a shot from behind the three-point line. The game lasts four periods of 10 or 12 minutes, depending on the league rules. Basketball requires excellent physical fitness, coordination and teamwork. In addition to throwing the ball, players actively defend, steal the ball and perform combinations to confuse the opponent. This game is popular all over the world, especially in the United States, where the National Basketball Association (NBA) is one of the leading sports leagues. Basketball teaches discipline, strategic thinking and develops team play skills.
+                </p>
+            </div>
+        </div>
+        <div id="content3" class="content">
+            <div class="main1">
+                <h1 id="title3">Žalgiris</h1>
+                <p id="text3" class="text">
+                    Zalgiris is a professional basketball club from Kaunas, Lithuania. Founded in 1944, the club has become a true symbol of Lithuanian basketball and one of the most successful in Europe. Throughout its history, Zalgiris has won the Lithuanian championship many times and has also achieved success on the international stage, including winning the Euroleague in 1999. The club is famous for its graduates, including the legendary Arvydas Sabonis, one of the greatest centers in the history of basketball. Today, Zalgiris continues to actively participate in major European tournaments and maintain a high level of Lithuanian basketball.
+                </p>
+            </div>
+        </div>
+    </div>
+    <img id="content3" class="content" src="Žalgiris_logo.png" alt="">
+    <script>
+        const translations = {
+            en: {
+                title1: "About Site",
+                text1: "The site presents the history of basketball, from its origins and development to the present day. It tells about the key moments in the development of this sport, famous players, major competitions and the influence of basketball on world culture. Particular attention is paid to the Zalgiris team, the famous Lithuanian basketball club. It describes its history, achievements in the international arena, important games and legendary players who made Zalgiris a symbol of Lithuanian basketball.",
+                title2: "About Basketball",
+                text2: "Basketball is a team sport played by two teams of five players. The goal of the game is to throw the ball into the opponent's basket, located at a height of 3.05 meters. Each successful hit earns the team points: two points for a shot from close range and three for a shot from behind the three-point line. The game lasts four periods of 10 or 12 minutes, depending on the league rules. Basketball requires excellent physical fitness, coordination and teamwork. In addition to throwing the ball, players actively defend, steal the ball and perform combinations to confuse the opponent. This game is popular all over the world, especially in the United States, where the National Basketball Association (NBA) is one of the leading sports leagues. Basketball teaches discipline, strategic thinking and develops team play skills.",
+                title3: "Žalgiris",
+                text3: "Zalgiris is a professional basketball club from Kaunas, Lithuania. Founded in 1944, the club has become a true symbol of Lithuanian basketball and one of the most successful in Europe. Throughout its history, Zalgiris has won the Lithuanian championship many times and has also achieved success on the international stage, including winning the Euroleague in 1999. The club is famous for its graduates, including the legendary Arvydas Sabonis, one of the greatest centers in the history of basketball. Today, Zalgiris continues to actively participate in major European tournaments and maintain a high level of Lithuanian basketball."
+            },
+            ru: {
+                title1: "О сайте",
+                text1: "На сайте представлена история баскетбола, от его истоков и развития до наших дней. В ней рассказывается о ключевых моментах в развитии этого вида спорта, знаменитых игроках, крупных соревнованиях и влиянии баскетбола на мировую культуру. Особое внимание уделяется команде «Жальгирис», известному литовскому баскетбольному клубу. В нем рассказывается о его истории, достижениях на международной арене, важных играх и легендарных игроках, сделавших «Жальгирис» символом литовского баскетбола.",
+                title2: "О баскетболе",
+                text2: "Баскетбол – это командный вид спорта, в который играют две команды по пять игроков. Цель игры заключается в том, чтобы забросить мяч в корзину соперника, расположенную на высоте 3,05 метра. За каждое удачное попадание команде начисляются очки: два очка за бросок с близкого расстояния и три за бросок из-за трехочковой линии. Игра длится четыре периода по 10 или 12 минут, в зависимости от правил лиги. Баскетбол требует отличной физической подготовки, координации и командной работы. Помимо броска мяча, игроки активно обороняются, крадут мяч и выполняют комбинации, чтобы запутать соперника. Эта игра популярна во всем мире, особенно в США, где Национальная баскетбольная ассоциация (НБА) является одной из ведущих спортивных лиг. Баскетбол учит дисциплине, стратегическому мышлению и развивает навыки командной игры.",
+                title3: "Жальгирис",
+                text3: "«Жальгирис» — литовский профессиональный баскетбольный клуб из Каунаса. Основанный в 1944 году, клуб стал настоящим символом литовского баскетбола и одним из самых успешных в Европе. За свою историю «Жальгирис» много раз выигрывал чемпионат Литвы, а также добивался успехов на международной арене, в том числе выиграл Евролигу в 1999 году. Клуб славится своими воспитанниками, в том числе легендарным Арвидасом Сабонисом, одним из величайших центровых в истории баскетбола. Сегодня «Жальгирис» продолжает активно участвовать в крупных европейских турнирах и поддерживать высокий уровень литовского баскетбола."
+            },
+            lt: {
+                title1: "Apie Svetainę",
+                text1: "Svetainėje pristatoma krepšinio istorija nuo jo ištakų ir raidos iki šių dienų. Jame pasakojama apie svarbiausius šio sporto raidos momentus, garsius žaidėjus, pagrindines varžybas ir krepšinio įtaką pasaulio kultūrai. Ypatingas dėmesys skiriamas Žalgirio komandai, garsiam Lietuvos krepšinio klubui. Jame aprašoma jo istorija, pasiekimai tarptautinėje arenoje, svarbios rungtynės ir legendiniai žaidėjai, kurie Žalgirį pavertė Lietuvos krepšinio simboliu.",
+                title2: "Apie Krepšinį",
+                text2: "Krepšinis yra komandinė sporto šaka, kurią žaidžia dvi komandos po penkis žaidėjus. Žaidimo tikslas yra mesti kamuolį į priešininko krepšį, esantį 3,05 metro aukštyje. Kiekvienas sėkmingas pataikymas uždirba komandai taškų: du taškai už šūvį iš artimo nuotolio ir trys už šūvį iš už tritaškio linijos. Žaidimas trunka keturis laikotarpius po 10 arba 12 minučių, priklausomai nuo lygos taisyklių.Krepšinis reikalauja puikaus fizinio pasirengimo, koordinacijos ir komandinio darbo. Be kamuolio metimo, žaidėjai aktyviai ginasi, vagia kamuolį ir atlieka derinius, kad supainiotų priešininką. Šis žaidimas yra populiarus visame pasaulyje, ypač JAV, kur Nacionalinė krepšinio asociacija (NBA) yra viena iš pirmaujančių sporto lygų. Krepšinis moko disciplinos, strateginio mąstymo ir lavina komandinio žaidimo įgūdžius.",
+                title3: "Žalgiris",
+                text3: "Žalgiris yra profesionalus krepšinio klubas iš Kauno, Lietuvos. 1944 m. įkurtas klubas tapo tikru Lietuvos krepšinio simboliu ir vienu sėkmingiausių Europoje. Per visą savo istoriją Žalgiris daug kartų laimėjo Lietuvos čempionatą, taip pat pasiekė sėkmės tarptautinėje arenoje, įskaitant ir Eurolygos laimėjimą 1999 m. Klubas garsėja savo auklėtiniais, tarp kurių – ir legendiniu Arvydu Saboniu, vienu didžiausių centrų krepšinio istorijoje. Šiandien Žalgiris ir toliau aktyviai dalyvauja svarbiausiuose Europos turnyruose bei palaiko aukštą Lietuvos krepšinio lygį."
+            }
+        };
+
+        const languageOrder = ['en', 'ru', 'lt'];
+        let currentLanguageIndex = 0;
+
+        function cycleLanguage() {
+            currentLanguageIndex = (currentLanguageIndex + 1) % languageOrder.length;
+            const selectedLanguage = languageOrder[currentLanguageIndex];
+            
+            document.getElementById('title1').innerText = translations[selectedLanguage].title1;
+            document.getElementById('text1').innerText = translations[selectedLanguage].text1;
+            document.getElementById('title2').innerText = translations[selectedLanguage].title2;
+            document.getElementById('text2').innerText = translations[selectedLanguage].text2;
+            document.getElementById('title3').innerText = translations[selectedLanguage].title3;
+            document.getElementById('text3').innerText = translations[selectedLanguage].text3;
+            
+            const languageNames = { en: "English", ru: "Русский", lt: "Lietuvių" };
+            document.getElementById('languageButton').innerText = `🌐 ${languageNames[selectedLanguage]}`;
+        }
+
+        function showContent(contentId) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                if (content.id === contentId) {
+                    content.classList.add('active', 'fade-in');
+                    content.classList.remove('fade-out');
+                } else {
+                    content.classList.add('fade-out');
+                    content.classList.remove('active', 'fade-in');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

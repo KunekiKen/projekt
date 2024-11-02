@@ -1,0 +1,81 @@
+body {
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url(empty-gym-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(7px);
+    margin: 20px;
+    height: 70px;
+    width: 97.5%;
+    border-radius: 5px;
+    right: 15px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+button {
+    margin-right: 60px;
+    margin-top: 22px;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+}
+.main1 {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 600px;
+    border-radius: 5px;
+}
+.main {
+    backdrop-filter: blur(7px);
+    margin: 20px;
+    width: 40%;
+    height: 600px;
+}
+button:hover {
+    color: rgb(243, 133, 43);
+}
+.text {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+img {
+    height: 400px;
+    width: 360px;
+    position: absolute;
+    right: 250px;
+    top: 150px;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.content {
+    display: none;
+}
+.content.active {
+    display: block;
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+.fade-out {
+    animation: fadeOut 0.8s forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+}
